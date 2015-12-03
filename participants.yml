@@ -1,0 +1,13 @@
+participants:
+  - dad
+  - mum
+  - dave
+  - martyn
+  - caroline
+  - lisa
+
+exclusions:
+  mum:  dad
+  dad:  mum
+  dave: lisa
+  lisa: dave
