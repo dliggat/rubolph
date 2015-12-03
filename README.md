@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dliggat/rubolph.svg?branch=master)](https://travis-ci.org/dliggat/rubolph)
+
 # Rubolph
 
 A secret santa assignment chooser. Each person is assigned as both a giver and a receiver, subject to the exclusion constraints.
