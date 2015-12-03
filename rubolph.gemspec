@@ -5,6 +5,7 @@ require 'rubolph/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rubolph"
+  spec.description   = "A rubygem to assist in picking secret santa assignments"
   spec.version       = Rubolph::VERSION
   spec.authors       = ["Dave Liggat"]
   spec.email         = ["dave@liggat.org"]
