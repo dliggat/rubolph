@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/rubolph.svg)](http://badge.fury.io/rb/rubolph)
 [![Build Status](https://travis-ci.org/dliggat/rubolph.svg?branch=master)](https://travis-ci.org/dliggat/rubolph)
 
 # Rubolph
