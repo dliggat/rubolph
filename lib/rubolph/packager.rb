@@ -1,3 +1,5 @@
+require 'date'
+
 module Rubolph
   class Packager
 
@@ -5,10 +7,10 @@ module Rubolph
      @results = results
    end
 
-   def package
+   def package(year=Date.today.year)
     @results.each do |giver, receiver|
-      open("./output/#{giver}.txt", 'w') do |f|
-        f.puts "Hello #{giver.capitalize}. For Christmas 2015, you're buying a present for #{receiver.capitalize}."
+      File.open("./output/#{giver}.txt", 'w') do |f|
+        f.puts "Hello #{giver.capitalize}. For Christmas #{year}, you're buying a present for #{receiver.capitalize}."
       end
     end
    end
