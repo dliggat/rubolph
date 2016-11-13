@@ -4,10 +4,10 @@ describe Rubolph::Picker do
 
   before :each do
     @participants = [:dad, :mum, :bro1, :bro2, :sis1, :bro1spouse]
-    @exclusions   = { dad:        :mum,
-                      mum:        :dad,
-                      bro1:       :bro1spouse,
-                      bro1spouse: :bro1 }
+    @exclusions   = { dad:        [:mum],
+                      mum:        [:dad],
+                      bro1:       [:bro1spouse],
+                      bro1spouse: [:bro1]}
   end
 
   it 'should handle an empty case' do
@@ -71,7 +71,7 @@ describe Rubolph::Picker do
   end
 
   it 'should fail gracefully if the exclusions provided are impossible to satisfy' do
-    obj = described_class.new [:a, :b], {a: :b, b: :a}
+    obj = described_class.new [:a, :b], {a: [:b], b: [:a]}
     expect {
       obj.pick
     }.to raise_error(ArgumentError, /Unable to reconcile/)

@@ -19,7 +19,7 @@ module Rubolph
 
         valid = true
         @results.each do |giver, receiver|
-          if giver == receiver || @exclusions[giver] == receiver
+          if giver == receiver || (@exclusions[giver] or []).include?(receiver)
             valid = false
             break
           end

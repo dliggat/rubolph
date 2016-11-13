@@ -1,13 +1,16 @@
 participants:
-  - dad
   - mum
+  - dad
   - dave
   - martyn
   - caroline
   - lisa
 
 exclusions:
-  mum:  dad
-  dad:  mum
-  dave: lisa
-  lisa: dave
+  # Exclude husband/wives, and last year's present assignment.
+  mum: [dad, caroline]
+  dad: [mum, dave]
+  dave: [lisa, martyn]
+  lisa: [dave, dad]
+  martyn: [lisa]
+  caroline: [mum]
